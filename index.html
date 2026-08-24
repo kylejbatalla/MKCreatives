@@ -10,17 +10,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<!-- three.js (ES modules) for the spinning 3D "MK" mark in the hero -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.js",
+    "three/addons/": "./vendor/addons/"
+  }
+}
+</script>
 </head>
 <body>
 
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand">MK CREATIVES</b></a>
+    <a href="#top" class="brand">MK CREATIVES</a>
     <nav class="nav-links" id="navLinks">
       <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
       <a href="#contact" class="nav-cta">Book Now</a>
     </nav>
     <div class="burger" id="burger" aria-label="Menu" role="button" tabindex="0">
@@ -32,7 +40,7 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <img class="hero-logo" src="assets/mk-logo.png" alt="MK Creatives — DJ and Videography logo" />
+    <img class="hero-logo" src="assets/mk-logo.png" alt="MK Creatives — DJ and Videography" />
     <h1>Where the <span class="gold-text">Sound</span> <span class="amp">&amp;</span> the <span class="gold-text">Story</span><br/>Move Together</h1>
     <p class="tag">Professional DJ sets and cinematic videography from one creative signature — turning weddings, clubs, and private events into moments worth replaying.</p>
     <div class="hero-cta">
@@ -178,5 +186,6 @@
 </footer>
 
 <script src="script.js" defer></script>
+<script type="module" src="logo3d.js"></script>
 </body>
 </html>
